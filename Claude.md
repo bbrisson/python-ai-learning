@@ -35,7 +35,7 @@ excellent dans ce domaine.
 ## Mon environnement actuel
 - Machine : Asus Ascent GX10 (ARM64, Ubuntu)
 - Accès : SSH depuis un PC local
-- Conda : 25.11.1 (Miniconda)
+- Conda : 26.1.1 (Miniconda)
 - JupyterLab : installé via le dashboard GX10, démarre sur le port 11002
   - Working directory configuré à /home/bbrisson (pas /home/bbrisson/jupyterlab)
 - Git : 2.43.0, configuré (Benoit Brisson, benoit@fbrisson.com)
