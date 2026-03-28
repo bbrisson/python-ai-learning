@@ -64,13 +64,26 @@ python-ai-learning/
 └── 09-projets/         ← projets intégrateurs
 ```
 
+## Particularités de l'environnement Jupyter
+- JupyterLab tourne dans son propre `.venv` Python 3.12 — indépendant de conda
+- `!conda` échoue dans les cellules — utiliser le chemin absolu : `!/home/bbrisson/miniconda3/bin/conda`
+- `%%bash` échoue aussi pour conda — même raison (nouveau processus sans .bashrc)
+- Les commandes git fonctionnent avec `!` ou `%%bash` (git est dans le PATH système)
+- Pour les commandes multi-lignes dans Jupyter : utiliser `%%bash`
+- Pour commiter depuis Jupyter : utiliser le terminal SSH (plus fiable)
+
 ## Ce qu'on a accompli
 - Conda configuré avec l'environnement ai_learning
 - Git et GitHub CLI configurés et authentifiés
 - Repo python-ai-learning créé sur GitHub et cloné sur le GX10
 - Kernel ai_learning enregistré dans JupyterLab (Python 3.11, ipykernel 7.2.0)
 - JupyterLab working directory corrigé à /home/bbrisson
-- Notebooks créés :
-  - 01-environnement/01-setup.ipynb ✓
-  - 01-environnement/02-conda.ipynb ✓ (en cours)
-  - 02-python/01-bases.ipynb ✓ (à faire)
+
+## Notebooks et progression
+- 01-environnement/01-setup.ipynb ✓ complété
+- 01-environnement/02-conda.ipynb ✓ complété
+- 01-environnement/03-git.ipynb   ← PROCHAINE ÉTAPE
+  - Benoit connaît SVN — partir des différences SVN vs Git
+  - Contenu préparé : architecture, modèle de données, branches, staging area, workflow
+- 01-environnement/04-vscode-cursor.ipynb ← à faire
+- 02-python/01-bases.ipynb ✓ créé, pas encore complété
