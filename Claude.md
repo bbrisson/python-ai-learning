@@ -31,24 +31,55 @@ excellent dans ce domaine.
 - Tu respectes STRICTEMENT l'ordre d'apprentissage défini — ne pas sauter d'étapes
 - Pour exécuter une cellule Jupyter, tu dis "exécute avec Shift+Enter" — jamais "c'est toi qui tapes"
 - Tu ne répètes pas ce que je viens de faire ou de dire — tu vas droit au but
+- Quand tu mentionnes un pattern, un nom ou une commande, tu précises toujours
+  si cela cible un fichier ou un dossier
 
-## Mon environnement actuel
-- Machine : Asus Ascent GX10 (ARM64, Ubuntu)
+## Mes environnements
+
+### Asus Ascent GX10 (principal — calcul AI)
+- Machine : ARM64, Ubuntu
 - Accès : SSH depuis un PC local
 - Conda : 26.1.1 (Miniconda)
 - JupyterLab : installé via le dashboard GX10, démarre sur le port 11002
-  - Working directory configuré à /home/bbrisson (pas /home/bbrisson/jupyterlab)
+  - Working directory configuré à /home/bbrisson
 - Git : 2.43.0, configuré (Benoit Brisson, benoit@fbrisson.com)
 - GitHub CLI : 2.45.0, authentifié (bbrisson)
-- Repo apprentissage : ~/work/python-ai-learning (lié à github.com/bbrisson/python-ai-learning)
-- Environnement conda : ai_learning (Python 3.11, ipykernel 7.2.0)
+- Repo apprentissage : ~/work/python-ai-learning
+- Environnement conda : ai_learning (Python 3.11, ipykernel)
+
+### Laptop Windows (développement / notebooks)
+- Machine : Windows 11, x64
+- VSCode : 1.113.0 avec extension Jupyter
+- Conda : 26.1.1 (Miniconda, installé en mode utilisateur dans C:\Users\benoi\miniconda3)
+  - conda init configuré pour PowerShell
+  - Les environnements conda sont créés dans C:\Users\benoi\.conda\envs\
+- Git : 2.52.0
+- Repo apprentissage : C:\Users\benoi\work\python-ai-learning
+- Environnement conda : ai_learning (Python 3.11, ipykernel)
+  - Kernel enregistré dans C:\Users\benoi\AppData\Roaming\jupyter\kernels\ai_learning
+- JupyterLab : installé dans l'env base, accessible via navigateur (port 8888)
 
 ## Philosophie
-- Un seul JupyterLab (celui du GX10) avec plusieurs kernels conda
 - Un kernel par projet/environnement via ipykernel
+- JupyterLab installé dans base — kernels dans des envs séparés
 - Tout le code versionné sur GitHub
 - Auditer avant d'installer
 - Documenter les how-to dans les notebooks au fur et à mesure qu'on les découvre
+
+## Particularités de l'environnement Jupyter
+
+### GX10 (Ubuntu)
+- JupyterLab tourne dans son propre `.venv` Python 3.12 — indépendant de conda
+- `!conda` échoue dans les cellules — utiliser le chemin absolu : `!/home/bbrisson/miniconda3/bin/conda`
+- `%%bash` échoue aussi pour conda — même raison (nouveau processus sans .bashrc)
+- Les commandes git fonctionnent avec `!` ou `%%bash` (git est dans le PATH système)
+- Pour les commandes multi-lignes dans Jupyter : utiliser `%%bash`
+- Pour commiter depuis Jupyter : utiliser le terminal SSH (plus fiable)
+
+### Windows (VSCode)
+- `!conda` fonctionne dans les cellules (conda est dans le PATH de cmd.exe après conda init)
+- `conda activate` ne fonctionne pas dans les cellules — commandes à exécuter dans PowerShell
+- Après `ipykernel install`, faire Ctrl+Shift+P → `Jupyter: Restart Kernel` pour que VSCode prenne en compte le nouveau kernel.json
 
 ## Structure du repo
 ```
@@ -64,20 +95,14 @@ python-ai-learning/
 └── 09-projets/         ← projets intégrateurs
 ```
 
-## Particularités de l'environnement Jupyter
-- JupyterLab tourne dans son propre `.venv` Python 3.12 — indépendant de conda
-- `!conda` échoue dans les cellules — utiliser le chemin absolu : `!/home/bbrisson/miniconda3/bin/conda`
-- `%%bash` échoue aussi pour conda — même raison (nouveau processus sans .bashrc)
-- Les commandes git fonctionnent avec `!` ou `%%bash` (git est dans le PATH système)
-- Pour les commandes multi-lignes dans Jupyter : utiliser `%%bash`
-- Pour commiter depuis Jupyter : utiliser le terminal SSH (plus fiable)
-
 ## Ce qu'on a accompli
-- Conda configuré avec l'environnement ai_learning
+- Conda configuré avec l'environnement ai_learning (GX10 et Windows)
 - Git et GitHub CLI configurés et authentifiés
-- Repo python-ai-learning créé sur GitHub et cloné sur le GX10
-- Kernel ai_learning enregistré dans JupyterLab (Python 3.11, ipykernel 7.2.0)
-- JupyterLab working directory corrigé à /home/bbrisson
+- Repo python-ai-learning créé sur GitHub, cloné sur GX10 et Windows
+- Kernel ai_learning enregistré dans JupyterLab et VSCode
+- JupyterLab installé dans base sur Windows (port 8888)
+- .gitignore ajouté (exclut le dossier .ipynb_checkpoints)
+- environment.yml nettoyé (prefix Linux supprimé pour portabilité)
 
 ## Notebooks et progression
 - 01-environnement/01-setup.ipynb ✓ complété
@@ -87,5 +112,6 @@ python-ai-learning/
   - Sections validées : 1 (architecture), 2 (modèle de données)
   - Sections à valider : 3 (branches), 4 (workflow), 5 (staging area), 6 (commit local), 7 (tableau), 8 (métaphore)
   - Règle de travail : section par section, valider avant de continuer
-- 01-environnement/04-vscode-cursor.ipynb ← à faire
+- 01-environnement/04-jupyter.ipynb ✓ complété (installation JupyterLab sur Windows)
+- 01-environnement/05-vscode-cursor.ipynb ← à faire
 - 02-python/01-bases.ipynb ✓ créé, pas encore complété

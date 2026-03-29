@@ -4,4 +4,3 @@ channels:
 dependencies:
   - python=3.11
   - ipykernel
-prefix: /home/bbrisson/miniconda3/envs/ai_learning
