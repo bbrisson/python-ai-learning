@@ -14,3 +14,12 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# VSCode
+.vscode/launch.json
+
+# Quarto outputs
+*.html
+*.qmd
+*_files/
+.quarto/

@@ -107,11 +107,8 @@ python-ai-learning/
 ## Notebooks et progression
 - 01-environnement/01-setup.ipynb ✓ complété
 - 01-environnement/02-conda.ipynb ✓ complété
-- 01-environnement/03-git.ipynb   ← EN COURS
-  - Notebook créé avec 8 sections (SVN vs Git)
-  - Sections validées : 1 (architecture), 2 (modèle de données)
-  - Sections à valider : 3 (branches), 4 (workflow), 5 (staging area), 6 (commit local), 7 (tableau), 8 (métaphore)
-  - Règle de travail : section par section, valider avant de continuer
+- 01-environnement/03-git.ipynb ✓ complété (10 sections : architecture, modèle de données, branches, workflow, staging area, commit local, tableau récap, métaphore, conflits d'équipe, git blame)
 - 01-environnement/04-jupyter.ipynb ✓ complété (installation JupyterLab sur Windows)
 - 01-environnement/05-vscode-cursor.ipynb ← à faire
+- 01-environnement/06-quarto.ipynb        ← EN COURS (installation en progress)
 - 02-python/01-bases.ipynb ✓ créé, pas encore complété
