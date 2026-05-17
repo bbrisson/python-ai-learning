@@ -91,7 +91,7 @@ python-ai-learning/
 ├── 05-deep-learning/   ← réseaux de neurones : pytorch, CNN, RNN
 ├── 06-nlp/             ← texte : transformers, embeddings, fine-tuning
 ├── 07-llm/             ← modèles de langage : API, prompt engineering
-├── 08-rag/             ← RAG : vector DB, langchain/llamaindex, agents
+├── 08-rag/             ← RAG : vector DB, langchain/llamaindex, agents, cognee (knowledge graphs)
 └── 09-projets/         ← projets intégrateurs
 ```
 

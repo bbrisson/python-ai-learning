@@ -4,24 +4,40 @@
     "type": "split",
     "children": [
       {
-        "id": "78143d8d9bc6bf5a",
+        "id": "d318579af4afa4b1",
         "type": "tabs",
         "children": [
           {
-            "id": "6045d7e46e1d799d",
+            "id": "05a7bc981a78adfc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "canvas",
               "state": {
-                "file": "CLAUDE.md",
-                "mode": "source",
-                "source": false
+                "file": "Untitled.canvas",
+                "viewState": {
+                  "x": 0,
+                  "y": 0,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-file",
-              "title": "CLAUDE"
+              "icon": "lucide-layout-dashboard",
+              "title": "Untitled"
+            }
+          },
+          {
+            "id": "0d3c3d881a351c91",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2026-05-02 19.28.46.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2026-05-02 19.28.46.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,12 +196,17 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "6045d7e46e1d799d",
+  "active": "0d3c3d881a351c91",
   "lastOpenFiles": [
+    "Untitled.canvas",
+    "Excalidraw/Drawing 2026-05-02 19.28.46.excalidraw.md",
+    "Excalidraw",
     "_obsidian/Index.md",
+    "CLAUDE.md",
     "_obsidian/Progression.md",
     "01-environnement/ex2_figures_files/figure-html/fig-sinus-output-1.png",
     "_obsidian/Structure-Repo.md",
