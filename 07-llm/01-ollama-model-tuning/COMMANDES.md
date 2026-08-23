@@ -506,3 +506,66 @@ Pour cet exercice, les idées importantes sont :
 - `test_model.py` valide l'appel Python vers Ollama ;
 - `ollama create` crée le modèle personnalisé ;
 - `ollama run` permet de le tester dans le terminal.
+
+## 14. Commandes pour lancer la GUI Streamlit
+
+Une GUI de comparaison côte à côte existe dans :
+
+```text
+07-llm/01-ollama-model-tuning/gui_compare_models.py
+```
+
+Elle permet de comparer les réponses de :
+
+```text
+llama3.2:3b
+prof-python-ai
+```
+
+### Installer Streamlit
+
+Streamlit doit être installé dans l'environnement Conda du projet :
+
+```text
+ai_learning
+```
+
+Commande utilisée :
+
+```powershell
+conda run -n ai_learning python -m pip install streamlit
+```
+
+Vérifier l'installation :
+
+```powershell
+conda run -n ai_learning python -m streamlit --version
+```
+
+### Lancer la GUI
+
+Depuis la racine du projet :
+
+```powershell
+conda run -n ai_learning python -m streamlit run 07-llm/01-ollama-model-tuning/gui_compare_models.py
+```
+
+Pourquoi `python -m streamlit` ?
+
+Parce que sous Windows, la commande `streamlit` peut ne pas être trouvée si le dossier `Scripts` de l'environnement Conda n'est pas dans le PATH.
+
+Avec `python -m streamlit`, on demande directement au Python de l'environnement `ai_learning` de lancer le module Streamlit.
+
+### Ce que fait la GUI
+
+Elle permet de :
+
+- poser une question commune aux deux modèles ;
+- voir les réponses côte à côte ;
+- modifier le `Modelfile` local ;
+- sauvegarder le `Modelfile` ;
+- afficher les commandes pour mettre à jour `prof-python-ai` sur le serveur.
+
+Elle ne lance pas automatiquement `ssh`, `scp` ou `ollama create`.
+
+C'est volontaire : la première version reste sûre et pédagogique.

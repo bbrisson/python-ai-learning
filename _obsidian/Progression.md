@@ -1,7 +1,7 @@
 ---
 type: tracker
 title: Progression des notebooks
-updated: 2026-04-12
+updated: 2026-08-16
 ---
 
 # Progression des notebooks
@@ -31,6 +31,23 @@ updated: 2026-04-12
 
 ---
 
+## Parcours applications IA modernes
+
+Le matériel est prêt dans le dossier
+`09-projets/02-assistant-apprentissage-ia/`, mais il reste à étudier. L'ordre
+actif du parcours principal n'est pas modifié.
+
+| Chapitre | Statut | Contenu |
+|---|---|---|
+| `cours/01-pydantic.md` | 📘 Prêt, à étudier | Modèles, validation, sérialisation et invariants |
+| `cours/02-fastapi.md` | 📘 Prêt, à étudier | API, HTTP, OpenAPI et tests de routes |
+| `cours/03-outlines.md` | 📘 Prêt, à étudier | Génération structurée avec Pydantic et Ollama |
+| `cours/04-langchain.md` | 📘 Prêt, à étudier | Prompts, modèles, parseurs et composition LCEL |
+| `cours/05-langgraph.md` | 📘 Prêt, à étudier | État, nœuds, arêtes et branchements |
+| Mini-projet et 16 tests | ✅ Implémenté | Assistant d'étude testable hors ligne |
+
+---
+
 ## Modules futurs
 
 | Module | Dossier | Contenu prévu |
@@ -39,11 +56,13 @@ updated: 2026-04-12
 | 04 — ML classique | `04-machine-learning/` | scikit-learn, régression, classification |
 | 05 — Deep Learning | `05-deep-learning/` | pytorch, CNN, RNN |
 | 06 — NLP | `06-nlp/` | transformers, embeddings, fine-tuning |
-| 07 — LLM | `07-llm/` | API, prompt engineering |
-| 08 — RAG | `08-rag/` | vector DB, langchain/llamaindex, agents |
-| 09 — Projets | `09-projets/` | Projets intégrateurs |
+| 07 — LLM | `07-llm/` | Ollama, API, prompt engineering, sorties structurées |
+| 08 — RAG | `08-rag/` | vector DB, LangChain, LangGraph, agents |
+| 09 — Projets | `09-projets/` | Architecture et projets intégrateurs |
 
-> Ces dossiers existent déjà dans le repo (fichier `.gitkeep`), en attente de contenu.
+> Les modules 03 à 06 sont encore des dossiers d'attente. Les modules 07 à 09
+> contiennent maintenant du matériel, sans que ce matériel soit considéré comme
+> étudié.
 
 ---
 
@@ -54,3 +73,4 @@ updated: 2026-04-12
 | ✅ | Complété |
 | 🟡 | En cours ou créé mais incomplet |
 | 🔲 | À faire |
+| 📘 | Matériel prêt, étude non commencée |

@@ -1,7 +1,7 @@
 ---
 type: reference
 title: Inventaire des outils
-updated: 2026-04-12
+updated: 2026-08-16
 ---
 
 # Inventaire des outils
@@ -22,10 +22,21 @@ updated: 2026-04-12
 
 ### Environnement `ai_learning`
 
-```
-Python 3.11
-ipykernel
-```
+| Outil | Windows audité le 2026-08-16 | Rôle |
+|---|---:|---|
+| Python | 3.11.15 | Runtime du projet |
+| Pydantic | 2.13.4 | Contrats et validation |
+| FastAPI | 0.141.1 | API web |
+| Uvicorn | 0.51.0 | Serveur ASGI |
+| Outlines | 1.3.3 | Sorties LLM structurées |
+| LangChain | 1.3.15 | Composition de composants LLM |
+| LangGraph | 1.2.11 | Workflows avec état |
+| langchain-ollama | 1.1.0 | Intégration Ollama |
+| pytest | 9.1.1 | Tests automatisés |
+
+Le fichier `environment.yml` permet d'installer les mêmes intervalles de
+versions sur le GX10. Les versions réellement résolues sur ARM64 doivent être
+auditées après la synchronisation de cet environnement.
 
 Commande pour recréer depuis le fichier `environment.yml` (fichier à la racine du repo) :
 ```bash

@@ -1,7 +1,7 @@
 ---
 type: MOC
 title: Index — python-ai-learning
-updated: 2026-04-12
+updated: 2026-08-16
 ---
 
 # python-ai-learning — Map of Content
@@ -20,6 +20,7 @@ Vault de référence pour le projet d'apprentissage Python / AI de Benoit Brisso
 | [[Philosophie]] | Principes de travail et règles pédagogiques |
 | [[Jupyter-Gotchas]] | Pièges Jupyter par environnement |
 | [[Outils]] | Inventaire des outils installés |
+| [[../09-projets/02-assistant-apprentissage-ia/README\|Parcours applications IA]] | Pydantic, FastAPI, Outlines, LangChain et LangGraph |
 
 ---
 
@@ -29,6 +30,7 @@ Vault de référence pour le projet d'apprentissage Python / AI de Benoit Brisso
 - **Repo GitHub** : `bbrisson/python-ai-learning`
 - **Module en cours** : `01-environnement` → notebook `06-quarto.ipynb` (EN COURS)
 - **Prochain notebook** : `05-vscode-cursor.ipynb` (à faire)
+- **Nouveau matériel prêt** : projet intégrateur applications IA (à étudier après les prérequis Python)
 
 ---
 

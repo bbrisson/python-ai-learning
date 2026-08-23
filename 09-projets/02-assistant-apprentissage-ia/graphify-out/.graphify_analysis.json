@@ -1,0 +1,293 @@
+{
+  "communities": {
+    "0": [
+      "enum",
+      "parametrize",
+      "src_study_assistant_planner",
+      "src_study_assistant_planner_build_local_plan",
+      "src_study_assistant_planner_rationale_1",
+      "src_study_assistant_planner_rationale_16",
+      "src_study_assistant_schemas",
+      "src_study_assistant_schemas_level",
+      "src_study_assistant_schemas_py_basemodel",
+      "src_study_assistant_schemas_rationale_1",
+      "src_study_assistant_schemas_rationale_17",
+      "src_study_assistant_schemas_rationale_23",
+      "src_study_assistant_schemas_rationale_49",
+      "src_study_assistant_schemas_rationale_57",
+      "src_study_assistant_schemas_strictmodel",
+      "src_study_assistant_schemas_studyplan",
+      "src_study_assistant_schemas_studystep",
+      "str",
+      "tests_test_schemas",
+      "tests_test_schemas_test_plan_rejects_an_incoherent_total",
+      "tests_test_schemas_test_plan_serialization_round_trip_preserves_contract",
+      "tests_test_schemas_test_request_normalizes_and_validates_input",
+      "tests_test_schemas_test_request_rejects_invalid_boundaries"
+    ],
+    "1": [
+      "field_validator",
+      "post",
+      "src_study_assistant_api",
+      "src_study_assistant_api_create_study_plan",
+      "src_study_assistant_api_execute_study_workflow",
+      "src_study_assistant_api_rationale_1",
+      "src_study_assistant_api_rationale_36",
+      "src_study_assistant_api_rationale_48",
+      "src_study_assistant_init",
+      "src_study_assistant_init_rationale_1",
+      "src_study_assistant_schemas_rationale_31",
+      "src_study_assistant_schemas_rationale_41",
+      "src_study_assistant_schemas_rationale_80",
+      "src_study_assistant_schemas_studyrequest",
+      "src_study_assistant_schemas_studyrequest_topic_must_contain_text",
+      "src_study_assistant_schemas_workflowresult",
+      "src_study_assistant_workflow_rationale_113",
+      "src_study_assistant_workflow_run_workflow",
+      "tests_test_workflow",
+      "tests_test_workflow_test_high_score_routes_to_progression",
+      "tests_test_workflow_test_low_score_routes_to_revision",
+      "tests_test_workflow_test_missing_score_uses_safe_revision_branch"
+    ],
+    "2": [
+      "aimessage",
+      "chatprompttemplate",
+      "runnable",
+      "src_study_assistant_chain",
+      "src_study_assistant_chain_build_offline_chain",
+      "src_study_assistant_chain_build_ollama_chain",
+      "src_study_assistant_chain_build_teacher_prompt",
+      "src_study_assistant_chain_explain_topic",
+      "src_study_assistant_chain_offline_model",
+      "src_study_assistant_chain_py_any",
+      "src_study_assistant_chain_rationale_1",
+      "src_study_assistant_chain_rationale_18",
+      "src_study_assistant_chain_rationale_37",
+      "src_study_assistant_chain_rationale_49",
+      "src_study_assistant_chain_rationale_58",
+      "src_study_assistant_chain_rationale_69",
+      "tests_test_chain",
+      "tests_test_chain_test_langchain_composition_runs_without_external_model"
+    ],
+    "3": [
+      "src_study_assistant_workflow",
+      "src_study_assistant_workflow_assess_progress",
+      "src_study_assistant_workflow_build_workflow",
+      "src_study_assistant_workflow_create_plan",
+      "src_study_assistant_workflow_prepare_progression",
+      "src_study_assistant_workflow_prepare_revision",
+      "src_study_assistant_workflow_rationale_1",
+      "src_study_assistant_workflow_rationale_15",
+      "src_study_assistant_workflow_rationale_39",
+      "src_study_assistant_workflow_rationale_48",
+      "src_study_assistant_workflow_rationale_59",
+      "src_study_assistant_workflow_rationale_87",
+      "src_study_assistant_workflow_request_from_state",
+      "src_study_assistant_workflow_route_after_assessment",
+      "src_study_assistant_workflow_studystate",
+      "typeddict"
+    ],
+    "4": [
+      "exercices_03_pydantic_contraintes_field",
+      "exercices_03_pydantic_contraintes_field_display_json_schema",
+      "exercices_03_pydantic_contraintes_field_learninggoal",
+      "exercices_03_pydantic_contraintes_field_main",
+      "exercices_03_pydantic_contraintes_field_py_any",
+      "exercices_03_pydantic_contraintes_field_py_basemodel",
+      "exercices_03_pydantic_contraintes_field_rationale_1",
+      "exercices_03_pydantic_contraintes_field_rationale_19",
+      "exercices_03_pydantic_contraintes_field_rationale_35",
+      "exercices_03_pydantic_contraintes_field_rationale_59",
+      "exercices_03_pydantic_contraintes_field_rationale_69",
+      "exercices_03_pydantic_contraintes_field_validate_case"
+    ],
+    "5": [
+      "src_study_assistant_outlines_adapter",
+      "src_study_assistant_outlines_adapter_create_ollama_generator",
+      "src_study_assistant_outlines_adapter_generate_structured_plan",
+      "src_study_assistant_outlines_adapter_normalize_generated_plan",
+      "src_study_assistant_outlines_adapter_py_any",
+      "src_study_assistant_outlines_adapter_rationale_1",
+      "src_study_assistant_outlines_adapter_rationale_16",
+      "src_study_assistant_outlines_adapter_rationale_29",
+      "src_study_assistant_outlines_adapter_rationale_43",
+      "tests_test_outlines_adapter",
+      "tests_test_outlines_adapter_test_generation_boundary_can_be_tested_without_ollama",
+      "tests_test_outlines_adapter_test_normalize_generated_plan_accepts_json"
+    ],
+    "6": [
+      "exercices_01_pydantic_premier_modele",
+      "exercices_01_pydantic_premier_modele_create_learning_goal",
+      "exercices_01_pydantic_premier_modele_display_learning_goal",
+      "exercices_01_pydantic_premier_modele_learninggoal",
+      "exercices_01_pydantic_premier_modele_main",
+      "exercices_01_pydantic_premier_modele_py_basemodel",
+      "exercices_01_pydantic_premier_modele_rationale_1",
+      "exercices_01_pydantic_premier_modele_rationale_15",
+      "exercices_01_pydantic_premier_modele_rationale_22",
+      "exercices_01_pydantic_premier_modele_rationale_35",
+      "exercices_01_pydantic_premier_modele_rationale_45"
+    ],
+    "7": [
+      "exercices_02_pydantic_validation_conversion",
+      "exercices_02_pydantic_validation_conversion_learninggoal",
+      "exercices_02_pydantic_validation_conversion_main",
+      "exercices_02_pydantic_validation_conversion_py_any",
+      "exercices_02_pydantic_validation_conversion_py_basemodel",
+      "exercices_02_pydantic_validation_conversion_rationale_1",
+      "exercices_02_pydantic_validation_conversion_rationale_17",
+      "exercices_02_pydantic_validation_conversion_rationale_24",
+      "exercices_02_pydantic_validation_conversion_rationale_47",
+      "exercices_02_pydantic_validation_conversion_validate_learning_goal"
+    ],
+    "8": [
+      "get",
+      "src_study_assistant_api_health",
+      "src_study_assistant_api_rationale_24",
+      "src_study_assistant_schemas_healthresponse",
+      "src_study_assistant_schemas_rationale_89"
+    ],
+    "9": [
+      "tests_test_api",
+      "tests_test_api_test_create_study_plan",
+      "tests_test_api_test_fastapi_translates_validation_error_to_422",
+      "tests_test_api_test_health_endpoint",
+      "tests_test_api_test_workflow_endpoint_exposes_branch_result"
+    ],
+    "10": [
+      "model_validator",
+      "src_study_assistant_schemas_rationale_68",
+      "src_study_assistant_schemas_studyplan_durations_must_match_total"
+    ],
+    "11": [
+      "pkg_study_assistant"
+    ]
+  },
+  "cohesion": {
+    "0": 0.1422924901185771,
+    "1": 0.1471861471861472,
+    "2": 0.16339869281045752,
+    "3": 0.225,
+    "4": 0.19696969696969696,
+    "5": 0.25757575757575757,
+    "6": 0.2545454545454545,
+    "7": 0.2222222222222222,
+    "8": 0.4,
+    "9": 0.4,
+    "10": 0.6666666666666666,
+    "11": 1.0
+  },
+  "gods": [
+    {
+      "id": "src_study_assistant_schemas_studyrequest",
+      "label": "StudyRequest",
+      "degree": 27
+    },
+    {
+      "id": "src_study_assistant_schemas_studyplan",
+      "label": "StudyPlan",
+      "degree": 17
+    },
+    {
+      "id": "src_study_assistant_planner_build_local_plan",
+      "label": "build_local_plan()",
+      "degree": 13
+    },
+    {
+      "id": "src_study_assistant_workflow_studystate",
+      "label": "StudyState",
+      "degree": 10
+    },
+    {
+      "id": "src_study_assistant_workflow_run_workflow",
+      "label": "run_workflow()",
+      "degree": 9
+    },
+    {
+      "id": "src_study_assistant_outlines_adapter_generate_structured_plan",
+      "label": "generate_structured_plan()",
+      "degree": 8
+    },
+    {
+      "id": "src_study_assistant_schemas_strictmodel",
+      "label": "StrictModel",
+      "degree": 8
+    },
+    {
+      "id": "src_study_assistant_schemas_workflowresult",
+      "label": "WorkflowResult",
+      "degree": 8
+    },
+    {
+      "id": "src_study_assistant_chain_build_offline_chain",
+      "label": "build_offline_chain()",
+      "degree": 7
+    },
+    {
+      "id": "src_study_assistant_workflow_build_workflow",
+      "label": "build_workflow()",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "test_langchain_composition_runs_without_external_model()",
+      "target": "StudyRequest",
+      "source_files": [
+        "tests/test_chain.py",
+        "src/study_assistant/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "test_generation_boundary_can_be_tested_without_ollama()",
+      "target": "StudyRequest",
+      "source_files": [
+        "tests/test_outlines_adapter.py",
+        "src/study_assistant/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "test_normalize_generated_plan_accepts_json()",
+      "target": "StudyRequest",
+      "source_files": [
+        "tests/test_outlines_adapter.py",
+        "src/study_assistant/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "test_plan_rejects_an_incoherent_total()",
+      "target": "StudyRequest",
+      "source_files": [
+        "tests/test_schemas.py",
+        "src/study_assistant/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "test_plan_serialization_round_trip_preserves_contract()",
+      "target": "StudyRequest",
+      "source_files": [
+        "tests/test_schemas.py",
+        "src/study_assistant/schemas.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 12859,
+    "output": 11706
+  }
+}

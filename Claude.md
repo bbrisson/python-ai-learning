@@ -90,9 +90,9 @@ python-ai-learning/
 ├── 04-machine-learning/← ML classique : scikit-learn, régression, classification
 ├── 05-deep-learning/   ← réseaux de neurones : pytorch, CNN, RNN
 ├── 06-nlp/             ← texte : transformers, embeddings, fine-tuning
-├── 07-llm/             ← modèles de langage : API, prompt engineering
+├── 07-llm/             ← modèles de langage : API, prompt engineering, loop engineering
 ├── 08-rag/             ← RAG : vector DB, langchain/llamaindex, agents, cognee (knowledge graphs)
-└── 09-projets/         ← projets intégrateurs
+└── 09-projets/         ← projets intégrateurs, dont le parcours applications IA
 ```
 
 ## Ce qu'on a accompli
@@ -103,6 +103,8 @@ python-ai-learning/
 - JupyterLab installé dans base sur Windows (port 8888)
 - .gitignore ajouté (exclut le dossier .ipynb_checkpoints)
 - environment.yml nettoyé (prefix Linux supprimé pour portabilité)
+- Parcours Pydantic → FastAPI → Outlines → LangChain → LangGraph ajouté dans
+  09-projets/02-assistant-apprentissage-ia/ avec exemples et tests hors ligne
 
 ## Notebooks et progression
 - 01-environnement/01-setup.ipynb ✓ complété
@@ -112,3 +114,7 @@ python-ai-learning/
 - 01-environnement/05-vscode-cursor.ipynb ← à faire
 - 01-environnement/06-quarto.ipynb        ← EN COURS (installation en progress)
 - 02-python/01-bases.ipynb ✓ créé, pas encore complété
+- 07-llm/01-ollama-model-tuning/ ✓ Modelfile + GUI de comparaison
+- 07-llm/02-loop-engineering/ ← matériel prêt : 4 exemples exécutés et validés
+  contre qwen3.8:27b sur 192.168.18.5, + 17 tests hors ligne
+- 09-projets/02-assistant-apprentissage-ia/ ← matériel prêt, À ÉTUDIER après les prérequis Python

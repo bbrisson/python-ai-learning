@@ -1,7 +1,7 @@
 ---
 type: reference
 title: Structure du repo
-updated: 2026-04-12
+updated: 2026-08-16
 ---
 
 # Structure du repo
@@ -26,6 +26,8 @@ python-ai-learning/
 ├── 07-llm/                 ← modèles de langage : API, prompt engineering
 ├── 08-rag/                 ← RAG : vector DB, langchain/llamaindex, agents
 ├── 09-projets/             ← projets intégrateurs
+│   └── 02-assistant-apprentissage-ia/ ← parcours Pydantic/FastAPI/LLM
+├── README.md               ← point d'entrée et carte du parcours
 ├── CLAUDE.md               ← instructions pour Claude Code (contexte pédagogique)
 └── environment.yml         ← définition de l'env conda ai_learning
 ```
@@ -45,14 +47,26 @@ channels:
 dependencies:
   - python=3.11
   - ipykernel
+  - pip
+  - pip:
+      - pydantic
+      - fastapi
+      - outlines[ollama]
+      - langchain
+      - langchain-ollama
+      - langgraph
 ```
 
 Le `prefix` Linux a été supprimé pour assurer la portabilité GX10 ↔ Windows.
+Les dépendances applicatives passent par la section `pip`, avec des intervalles
+de versions détaillés dans le vrai fichier.
 
 ### `.gitignore` (fichier)
 
 Exclut notamment :
 - Le dossier `.ipynb_checkpoints/` (généré automatiquement par Jupyter)
+- Les caches Python, pytest, Ruff et mypy
+- Les métadonnées de paquet `*.egg-info/`
 
 ---
 
@@ -69,3 +83,12 @@ En plus des notebooks `.ipynb`, ce dossier contient des fichiers Quarto génér�
 | `ex2_figures.html` | fichier | Rendu HTML avec figure sinus |
 | `ex3_params.qmd` | fichier | Exercice Quarto — rapport paramétré |
 | `ex3_params.html` | fichier | Rendu HTML paramétré |
+
+---
+
+## Contenu de `09-projets/02-assistant-apprentissage-ia/`
+
+Ce dossier contient un parcours autonome en cinq chapitres, un paquet Python
+sous `src/study_assistant/` et des tests hors ligne. Il relie les contrats
+Pydantic, l'API FastAPI, la génération Outlines, la composition LangChain et le
+workflow LangGraph sans mélanger leurs responsabilités.

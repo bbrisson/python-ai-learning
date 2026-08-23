@@ -1,5 +1,16 @@
 # Ollama model tuning — première étape débutant
 
+> **Note d’organisation**  
+> Ce dossier `07-llm/01-ollama-model-tuning/` sert à expérimenter concrètement avec Ollama, les modèles LLM et une première GUI de comparaison.  
+> La GUI Streamlit présente ici est donc un **banc d’essai pédagogique et exploratoire**, pas nécessairement l’architecture cible pour déployer des outils internes en entreprise.  
+> L’analyse stratégique sur le choix d’architecture durable, sécurisable et déployable est documentée séparément dans :
+>
+> ```text
+> 09-projets/architecture-outils-internes/CHOIX_ARCHITECTURE_OUTILS_INTERNES.md
+> ```
+>
+> En résumé : `07-llm` sert à apprendre et tester rapidement ; `09-projets` sert à cadrer un projet intégrateur plus durable.
+
 ## 1. Objectif de ce dossier
 
 Ce dossier servira à construire un exemple simple de personnalisation d'un modèle avec **Ollama**.
@@ -379,6 +390,36 @@ La réponse dépend de ce que tu veux faire ensuite :
 
 ## 12. Critère de réussite de cette étape
 
+## 12. Création réussie du modèle personnalisé
+
+Le modèle personnalisé a été créé sur le serveur Ollama `192.168.18.5`.
+
+Commande utilisée :
+
+```bash
+ssh bbrisson@192.168.18.5 "cd /home/bbrisson/work/python-ai-learning/07-llm/01-ollama-model-tuning && ollama create prof-python-ai -f Modelfile && echo '--- modèles après création ---' && ollama list"
+```
+
+Résultat important :
+
+```text
+success
+```
+
+Le modèle apparaît maintenant dans `ollama list` :
+
+```text
+prof-python-ai:latest    603845aa5f89    2.0 GB
+```
+
+Cela confirme que le `Modelfile` a été accepté par Ollama et que le modèle personnalisé existe maintenant sur le serveur.
+
+À ce stade, on n'a pas encore testé la qualité de réponse de `prof-python-ai`.
+
+La prochaine étape possible sera de comparer la réponse du modèle de base `llama3.2:3b` avec celle du modèle personnalisé `prof-python-ai`.
+
+## 13. Critère de réussite de cette étape
+
 Cette étape est réussie si :
 
 - le dossier `07-llm/01-ollama-model-tuning/` existe ;
@@ -387,6 +428,89 @@ Cette étape est réussie si :
 - le fichier `Modelfile` existe ;
 - le fichier `test_model.py` existe et a été exécuté avec succès ;
 - la commande `ollama create` est documentée ;
+- le modèle `prof-python-ai` a été créé avec succès sur le serveur ;
 - les commandes SSH génériques sont documentées ;
-- aucune commande de création de modèle n'a été lancée sans validation ;
+- aucune commande de test du modèle personnalisé n'a été lancée sans validation ;
 - la suite se fait seulement après validation.
+
+## 14. GUI de comparaison côte à côte
+
+Une interface graphique Streamlit est disponible dans :
+
+```text
+gui_compare_models.py
+```
+
+Elle permet de comparer visuellement :
+
+```text
+llama3.2:3b
+```
+
+avec :
+
+```text
+prof-python-ai
+```
+
+La GUI permet de :
+
+- poser une question commune aux deux modèles ;
+- afficher les deux réponses côte à côte ;
+- voir une configuration de référence pour le modèle de base ;
+- éditer le `Modelfile` du modèle personnalisé ;
+- sauvegarder le `Modelfile` localement ;
+- afficher les commandes pour recréer `prof-python-ai` après modification.
+
+### Installation de Streamlit
+
+Streamlit a été installé dans l'environnement Conda du projet :
+
+```text
+ai_learning
+```
+
+Commande utilisée :
+
+```powershell
+conda run -n ai_learning python -m pip install streamlit
+```
+
+Vérification :
+
+```powershell
+conda run -n ai_learning python -m streamlit --version
+```
+
+Résultat obtenu :
+
+```text
+Streamlit, version 1.59.2
+```
+
+### Lancement de la GUI
+
+Depuis la racine du projet :
+
+```powershell
+conda run -n ai_learning python -m streamlit run 07-llm/01-ollama-model-tuning/gui_compare_models.py
+```
+
+On utilise `python -m streamlit` pour éviter les problèmes de PATH Windows avec la commande `streamlit`.
+
+### Mise à jour du modèle personnalisé
+
+La GUI ne lance pas automatiquement `ssh`, `scp` ou `ollama create`.
+
+Elle affiche plutôt les commandes à copier-coller.
+
+Raison : c'est plus sûr pour un débutant, car recréer un modèle modifie l'état du serveur Ollama.
+
+Deux workflows sont affichés :
+
+1. workflow Git ;
+2. workflow `scp` rapide.
+
+Le workflow Git garde les modifications versionnées.
+
+Le workflow `scp` est plus rapide pour tester une modification de `Modelfile` avant de committer.

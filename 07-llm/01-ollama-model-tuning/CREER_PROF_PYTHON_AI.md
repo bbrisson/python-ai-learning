@@ -746,3 +746,85 @@ Options recommandées :
 
 1. utiliser Git, si on veut un workflow propre et versionné ;
 2. utiliser `scp`, si on veut tester rapidement avant de committer.
+
+## 21. Création réelle effectuée avec succès
+
+La synchronisation par Git a été utilisée.
+
+Depuis Windows :
+
+```text
+git add ...
+git commit -m "Add Ollama model tuning example"
+git push
+```
+
+Le commit créé est :
+
+```text
+d96cae4 Add Ollama model tuning example
+```
+
+Puis, sur le serveur `192.168.18.5`, un `git pull` a été exécuté depuis :
+
+```text
+/home/bbrisson/work/python-ai-learning
+```
+
+Le dossier suivant est maintenant présent sur le serveur :
+
+```text
+/home/bbrisson/work/python-ai-learning/07-llm/01-ollama-model-tuning
+```
+
+Le fichier `Modelfile` a été vérifié sur le serveur.
+
+La création du modèle a ensuite été lancée avec :
+
+```bash
+ssh bbrisson@192.168.18.5 "cd /home/bbrisson/work/python-ai-learning/07-llm/01-ollama-model-tuning && ollama create prof-python-ai -f Modelfile && echo '--- modèles après création ---' && ollama list"
+```
+
+Résultat important :
+
+```text
+success
+```
+
+Puis `ollama list` a confirmé la présence du nouveau modèle :
+
+```text
+prof-python-ai:latest    603845aa5f89    2.0 GB    Less than a second ago
+```
+
+Conclusion :
+
+```text
+Le modèle prof-python-ai a été créé avec succès sur le serveur Ollama.
+```
+
+## 22. État actuel
+
+À ce stade :
+
+- le serveur Ollama répond ;
+- le modèle de base `llama3.2:3b` existe ;
+- le script Python `test_model.py` fonctionne avec `llama3.2:3b` ;
+- le `Modelfile` est présent sur le serveur ;
+- le modèle personnalisé `prof-python-ai` existe maintenant dans Ollama.
+
+Aucun test de génération avec `prof-python-ai` n'a encore été lancé dans cette étape.
+
+La prochaine étape possible sera de comparer :
+
+```text
+llama3.2:3b
+```
+
+avec :
+
+```text
+prof-python-ai
+```
+
+mais ce sera fait seulement après validation explicite.
